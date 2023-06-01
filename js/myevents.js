@@ -33,7 +33,7 @@ if(localStorage.getItem('isStudent') != 'true'){
 }
 
 for(let i = 1; i < 23; i++){
-    if(localStorage.getItem('event' + i.toString()) != 'true'){
+    if(localStorage.getItem('event' + i.toString()) != 'true' && i != 17){
         document.getElementById(i.toString()).style.display = 'none';
     }
 }
