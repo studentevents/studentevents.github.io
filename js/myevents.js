@@ -45,7 +45,7 @@ if(localStorage.getItem('user') == 'true'){
 
 share.forEach(el => {
     el.addEventListener("click", function(){
-        navigator.clipboard.writeText(window.location.href);
+        navigator.clipboard.writeText("https://studentevents.github.io/index.html");
         fadeM(message, 1000, 'flex');
     })
 })
