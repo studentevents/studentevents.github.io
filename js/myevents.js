@@ -32,9 +32,9 @@ if(localStorage.getItem('isStudent') != 'true'){
     })
 }
 
-for(let i = 0; i < 8; i++){
+for(let i = 1; i < 23; i++){
     if(localStorage.getItem('event' + i.toString()) != 'true'){
-        events[i].style.display = 'none';
+        document.getElementById(i.toString()).style.display = 'none';
     }
 }
 if(localStorage.getItem('user') == 'true'){
@@ -55,8 +55,8 @@ deleteBtn.forEach(el => {
         el.parentElement.parentElement.parentElement.style.display = 'none';
         localStorage.setItem('event' + (el.parentElement.parentElement.parentElement.id).toString(), false);
         let count = 0;
-        for(let i = 0; i < 8; i++){
-            if(localStorage.getItem('event' + i.toString()) == 'true'){
+        for(let i = 1; i < 23; i++){
+            if(localStorage.getItem('event' + i.toString()) == 'true' && i != 17){
                 count++;
                 break;
             }

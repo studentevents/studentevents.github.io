@@ -76,6 +76,14 @@
 .header__logIn:hover .logOut {
   display: flex;
 }
+h1{
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
 
 .recent {
   display: flex;
@@ -106,7 +114,7 @@
 .events__up__item {
   width: 22%;
   position: relative;
-  height: 40vh;
+  height: 42vh;
 }
 .events__up__item__date {
   font-family: "Montserrat";
@@ -146,7 +154,7 @@
 .events__bottom__item {
   width: 22%;
   position: relative;
-  height: 40vh;
+  height: 42vh;
 }
 .events__bottom__item__date {
   font-family: "Montserrat";
@@ -437,5 +445,13 @@ h2 {
   color: gray;
   margin-left: 5px;
   cursor: pointer;
+}
+.events_3_item{
+  display: flex;
+  width: 100%;
+  justify-content: start;
+}
+.events5{
+  margin-right: 50px;
 }
 /*# sourceMappingURL=events.css.map */

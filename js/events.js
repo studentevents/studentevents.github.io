@@ -6,8 +6,8 @@ const modalCloseBtn = document.querySelector(".modal__form__close");
 const modalButtons = document.querySelectorAll(".modal__form__header__item");
 const modalTitle = document.querySelector(".modal__form__title");
 const modalButton = document.querySelector(".modal__form__btn");
-const eventsUp = document.querySelectorAll(".events__up__item__img");
-const eventsBottom = document.querySelectorAll(".events__bottom__item__img");
+const eventsUp = document.querySelectorAll(".events__up__item");
+const eventsBottom = document.querySelectorAll(".events__bottom__item");
 const select = document.querySelectorAll(".select");
 const message = document.querySelector(".message");
 const logOut = document.querySelector(".logOut");
@@ -64,25 +64,11 @@ logOut.addEventListener("click", function(){
     location.reload();
 })
 
-
-
-for(let i = 0; i < 8; i++){
-    if(localStorage.getItem('user') == 'true'){
-        if(localStorage.getItem("event" + i.toString()) == 'true'){
-        document.getElementById(i.toString()).classList.add("active");
-        select[i].classList.add("active");
-    }
-    }
-    
-}
-
-
-
 eventsUp.forEach(el => {
     el.addEventListener("click", function(){
         if(localStorage.getItem('user') == 'true'){
-            el.classList.add("active");
-            select[el.id].classList.add("active");
+            el.childNodes[3].childNodes[1].classList.add("active"); 
+            el.childNodes[3].childNodes[3].classList.add("active"); 
             localStorage.setItem('event' + el.id.toString(), true);
             window.location.href = '/html/myevents.html';
         }else{
@@ -93,8 +79,9 @@ eventsUp.forEach(el => {
 eventsBottom.forEach(el => {
     el.addEventListener("click", function(){
         if(localStorage.getItem('user') == 'true'){
+            el.childNodes[3].childNodes[1].classList.add("active");
+            el.childNodes[3].childNodes[3].classList.add("active");
             el.classList.add("active");
-            select[el.id].classList.add("active");
             localStorage.setItem('event' + el.id.toString(), true);
             window.location.href = '/html/myevents.html';
         }else{
@@ -147,15 +134,7 @@ modalButton.addEventListener("click", function(){
             localStorage.setItem('isStudent', false);
 
         }
-        for(let i = 0; i < 8; i++){
-            if(localStorage.getItem('user') == 'true'){
-                if(localStorage.getItem("event" + i.toString()) == 'true'){
-                document.getElementById(i.toString()).classList.add("active");
-                select[i].classList.add("active");
-            }
-            }
-            
-        }
+        location.reload();
     }else{
         fadeM(error, 1500, 'flex');
         document.querySelector(".name").value = '';

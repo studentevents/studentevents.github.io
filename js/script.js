@@ -9,6 +9,12 @@ const modalButton = document.querySelector(".modal__form__btn");
 const logOut = document.querySelector(".logOut");
 const error = document.querySelector(".error");
 let isStudent = true;
+const eventSix = document.getElementById("event_6");
+const eventOne = document.getElementById("event_1");
+const eventFive = document.getElementById("event_5");
+const eventTwo = document.getElementById("event_2");
+const eventFour = document.getElementById("event_4");
+const eventThree = document.getElementById("event_3");
 
 const fadeIn = (el, timeout, display) =>{
     el.style.opacity = 0;
@@ -50,6 +56,30 @@ if(localStorage.getItem('user') == 'true'){
     username.textContent = 'Василий';
     logInBtn.style.display = 'none';
 }
+
+eventSix.addEventListener("click", function(){
+    window.location.href = "/html/events6.html";
+})
+
+eventOne.addEventListener("click", function(){
+    window.location.href = "/html/events1.html";
+})
+
+eventFive.addEventListener("click", function(){
+    window.location.href = "/html/events5.html";
+})
+
+eventTwo.addEventListener("click", function(){
+    window.location.href = "/html/events2.html";
+})
+
+eventFour.addEventListener("click", function(){
+    window.location.href = "/html/events4.html";
+})
+
+eventThree.addEventListener("click", function(){
+    window.location.href = "/html/events3.html";
+})
 
 logInBtn.addEventListener("click", function(){
     fadeIn(modalWindow, 1000);
